@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "onelife0.play.hosting",
-    "port": 14438,
+    "ip": "62.141.62.13",
+    "port": 49268,
     "version": "1.21.4",
     "try-creative": false
   },
