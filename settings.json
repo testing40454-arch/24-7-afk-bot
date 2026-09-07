@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "onelife0.play.hosting",
-    "port": 14438,
+    "ip": "sgp1.bytenut.cc",
+    "port": 7320,
     "version": "1.21.4",
     "try-creative": false
   },
