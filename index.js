@@ -9,6 +9,22 @@ const express = require("express");
 const http = require("http");
 const https = require("https");
 
+  // ---------- AUTO VERIFY CODE (ANTI-SHUTDOWN) ----------
+  bot.on("messagestr", (message) => {
+    const match = message.match(/Enter code\s+([a-zA-Z0-9]+)\s+in chat/i);
+    if (match) {
+      const verifyCode = match[1];
+      addLog(`[Verify] Detected captcha code: ${verifyCode}`);
+
+      setTimeout(() => {
+        if (bot && botState.connected) {
+          bot.chat(verifyCode);
+          addLog(`[Verify] Successfully sent code: ${verifyCode}`);
+        }
+      }, 2500);
+    }
+  });
+
 // ============================================================
 // EXPRESS SERVER - Keep Render/Aternos alive
 // ============================================================
